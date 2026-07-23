@@ -25,10 +25,11 @@
 					<p class="tagline">Fast, reliable money transfers and product procurement delivered to Haiti and around the world and online ordering.</p>
 						<div class="hero-ctas">
 							<a class="btn primary" href="#calculator">Get an Estimate</a>
-							<a class="icon-link btn" href="#marketplace" title="Browse our Marketplace" aria-label="Browse our Marketplace">
-								<!-- marketplace icon -->
+							<a class="icon-link btn" href="#marketplace" title="Marketplace" aria-label="Browse our Marketplace">
+								<!-- home/market icon -->
 								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-									<path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M3 11.5L12 4l9 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M5 12v7a1 1 0 0 0 1 1h3v-5h6v5h3a1 1 0 0 0 1-1v-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
 							</a>
 						</div>
@@ -137,19 +138,21 @@
 						<div class="step-body">Delivered to Haiti</div>
 					</div>
 				</div>
-				<div class="shopping-form card">
-					<label class="paste-label">Paste Product Link</label>
-					<div class="paste-row">
-						<input type="url" id="productLink" class="paste-input" placeholder="https://amazon.com/...">
-						<button type="button" id="sendLinkBtn" class="icon-btn" aria-label="Send to WhatsApp">
-							<!-- simple send icon -->
+				<div class="shopping-form card" style="margin-top:2rem;max-width:600px;margin-left:auto;margin-right:auto">
+					<label style="display:block;margin-bottom:.5rem;font-weight:600">Paste Product Link</label>
+					<div style="display:flex;gap:.5rem;align-items:center">
+						<input type="url" id="productLink" placeholder="https://amazon.com/..." style="flex:1;padding:.6rem;border-radius:8px;border:1px solid rgba(2,6,23,0.06)">
+						<button type="button" id="sendLinkBtn" class="icon-btn whatsapp" title="Send to WhatsApp" aria-label="Send to WhatsApp">
+							<!-- WhatsApp icon (white on green) -->
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-								<path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								<path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M20.5 3.5L3.5 20.5" stroke="currentColor" stroke-width="0"/>
+								<path d="M20.5 3.5L3.5 20.5" stroke="currentColor" stroke-width="0"/>
+								<path d="M21 12.075c0 4.971-4.029 9-9 9a8.93 8.93 0 0 1-4.578-1.209L3 21l1.394-4.402A8.954 8.954 0 0 1 3 12.075c0-4.971 4.029-9 9-9s9 4.029 9 9z" stroke="none" fill="currentColor"/>
+								<path d="M17.2 14.1c-.3-.15-1.8-.9-2.1-.99-.3-.09-.5-.15-.7.15s-.8.99-.98 1.2c-.18.24-.36.27-.66.09-.3-.18-1.26-.46-2.4-1.48-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2 0-.38-.05-.53-.05-.15-.7-1.68-.96-2.3-.25-.6-.5-.52-.7-.53l-.6-.01c-.2 0-.52.07-.8.38-.28.32-1.06 1.03-1.06 2.5 0 1.48 1.09 2.92 1.25 3.12.16.2 2.16 3.5 5.24 4.91 3.08 1.42 3.08.95 3.64.9.56-.06 1.8-.73 2.05-1.44.25-.71.25-1.32.18-1.44-.06-.12-.22-.18-.48-.33z" stroke="white" fill="white"/>
 							</svg>
 						</button>
 					</div>
-					<div id="linkResult" class="muted paste-muted"></div>
+					<div id="linkResult" class="muted" style="margin-top:.5rem"></div>
 				</div>
 			</div>
 		</section>
