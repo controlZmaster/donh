@@ -26,18 +26,9 @@ body.dark .nav{background:linear-gradient(180deg,rgba(15,19,36,.75),rgba(15,19,3
 .btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:transparent;border:1px solid rgba(0,0,0,.08);text-decoration:none;color:var(--text)}
 .btn.primary{background:var(--primary);color:white;border:0}
 
-./* Hero CTAs */
+/* Hero CTAs */
 .hero-ctas{display:flex;gap:.45rem;align-items:center;flex-wrap:nowrap;margin-top:1rem}
-.hero-ctas .btn{flex:0 0 auto}
-
-/* Shopping form (paste product link) */
-.shopping-form{margin-top:2rem;max-width:560px;margin-left:auto;margin-right:auto;padding:1rem}
-.shopping-form .paste-label{display:block;margin-bottom:.5rem;font-weight:600}
-.paste-row{display:flex;gap:.5rem}
-.paste-input{flex:1;padding:.6rem;border-radius:8px;border:1px solid rgba(2,6,23,0.06)}
-.icon-btn{display:inline-flex;align-items:center;justify-content:center;padding:.5rem;border-radius:8px;border:0;background:var(--primary);color:#fff;cursor:pointer;width:42px;height:42px}
-.icon-btn svg{display:block}
-.paste-muted{margin-top:.5rem}
+.hero-ctas .btn{flex:0 0 auto;white-space:nowrap}
 
 .section{padding:2.5rem 0}
 .card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.06)}
@@ -51,7 +42,7 @@ body.dark .nav{background:linear-gradient(180deg,rgba(15,19,36,.75),rgba(15,19,3
 .result-value{font-size:1.5rem;font-weight:700}
 .info-panel{font-size:.95rem;color:var(--muted)}
 
-.grid.products{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.grid.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
 .category-section{margin-bottom:3rem}
 .category-title{font-size:1.5rem;margin:0 0 1rem;color:var(--text);font-weight:700}
 .product{background:var(--card);padding:1rem;border-radius:10px;display:flex;flex-direction:column;gap:.5rem}
@@ -103,27 +94,33 @@ body.dark .nav{background:linear-gradient(180deg,rgba(15,19,36,.75),rgba(15,19,3
 }
 @media(max-width:520px){
   /* Force 3-column product grid on phones; reduce card sizes */
-  .grid.products{grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
-  .product{padding:.6rem}
-  .product .image{height:90px}
-  .product h3{font-size:.95rem}
-  .product p{font-size:.85rem}
+  .grid.products{grid-template-columns:repeat(3,minmax(0,1fr));gap:.45rem}
+  .product{padding:.45rem;border-radius:8px}
+  .product .image{height:72px}
+  .product h3{font-size:.88rem;margin:.25rem 0}
+  .product p{font-size:.78rem}
   .hero-text h1{font-size:1.5rem}
   .category-title{font-size:1.25rem}
+  /* tighten CTA buttons so text fits inline */
+  .hero-ctas .btn{padding:.45rem .6rem;font-size:.95rem}
 }
 
 @media(max-width:380px){
   /* keep three columns even on very small phones per request; reduce sizes */
-  .grid.products{grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}
-  .product .image{height:72px}
-  .paste-row{flex-direction:row}
-  .icon-btn{width:36px;height:36px}
-  .icon-link{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;padding:.25rem}
+  .grid.products{grid-template-columns:repeat(3,minmax(0,1fr));gap:.35rem}
+  .product .image{height:56px}
 }
 
-/* Icon link (marketplace) styling */
-.icon-link{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;background:transparent;border:0;color:var(--text);width:40px;height:40px}
+/* WhatsApp icon button */
+.icon-btn.whatsapp{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;border:0;background:#25D366;color:#fff;width:40px;height:40px;padding:0}
+.icon-btn.whatsapp svg{display:block}
+
+/* Marketplace icon/button style */
+.icon-link{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;background:transparent;border:0;color:var(--text);width:40px;height:40px;padding:0}
 .icon-link svg{display:block}
+
+/* Icon link (marketplace) styling - removed (using text CTA)
+  kept minimal placeholder in case needed later */
 
 /* Utilities */
 .muted{color:var(--muted)}
